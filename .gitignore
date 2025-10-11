@@ -1,0 +1,21 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Node modules (por si en el futuro agregas herramientas)
+node_modules/
+
+# Archivos de trabajo personal
+cosas por ver meraki.txt
