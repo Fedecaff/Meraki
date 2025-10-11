@@ -17,6 +17,28 @@
     const el = document.getElementById(id);
     if (el) el.setAttribute('href', mapsUrl);
   });
+
+  // Menú hamburguesa
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mainNav = document.querySelector('.main-nav');
+  
+  if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', isOpen);
+      menuToggle.textContent = isOpen ? '✕' : '☰';
+    });
+
+    // Cerrar menú al hacer click en un enlace
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.textContent = '☰';
+      });
+    });
+  }
 })();
 
 
