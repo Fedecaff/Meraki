@@ -3,10 +3,10 @@
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   const wspBase = 'https://wa.me/543834938577';
-  const defaultMsg = 'Hola, quiero reservar un turno en Meraki. Mi nombre es ______. Servicio: ______. Profesional (opcional): ______. Día y horario preferidos: ______.';
+  const defaultMsg = 'Hola, quiero reservar un turno con Florencia en Meraki. Mi nombre es ______. Servicio: ______. Día y horario preferidos: ______.';
   const wspUrl = `${wspBase}?text=${encodeURIComponent(defaultMsg)}`;
 
-  ['cta-wsp', 'footer-wsp', 'services-wsp', 'book-now'].forEach((id) => {
+  ['cta-wsp', 'footer-wsp', 'services-wsp', 'book-now', 'faq-wsp'].forEach((id) => {
     const el = document.getElementById(id);
     if (el) el.setAttribute('href', wspUrl);
   });
@@ -18,27 +18,23 @@
     if (el) el.setAttribute('href', mapsUrl);
   });
 
-  // Menú hamburguesa
   const menuToggle = document.querySelector('.menu-toggle');
   const mainNav = document.querySelector('.main-nav');
-  
+
   if (menuToggle && mainNav) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mainNav.classList.toggle('active');
-      menuToggle.setAttribute('aria-expanded', isOpen);
+    const setMenuState = (isOpen) => {
+      mainNav.classList.toggle('active', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
       menuToggle.textContent = isOpen ? '✕' : '☰';
+    };
+
+    menuToggle.addEventListener('click', () => {
+      setMenuState(!mainNav.classList.contains('active'));
     });
 
-    // Cerrar menú al hacer click en un enlace
-    const navLinks = mainNav.querySelectorAll('a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
-      });
+    mainNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setMenuState(false));
     });
   }
 })();
-
-
