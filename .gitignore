@@ -17,5 +17,8 @@ desktop.ini
 # Node modules (por si en el futuro agregas herramientas)
 node_modules/
 
+# Vercel
+.vercel
+
 # Archivos de trabajo personal
 cosas por ver meraki.txt

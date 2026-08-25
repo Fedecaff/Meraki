@@ -1,34 +1,50 @@
 # Meraki - Salón de Bienestar
 
-Sitio web para Meraki, un salón de bienestar en Catamarca Capital que ofrece servicios profesionales de masajes, terapias alternativas y estética.
+Sitio web para Meraki, un salón de bienestar en Catamarca Capital. Actualmente las sesiones de masajes están a cargo de Florencia.
 
-## 🌿 Servicios
+## Servicios
 
-- **Masajes**: Descontracturante, relajante, ciático, bruxismo
-- **Terapias**: Reflexología, drenaje linfático, reiki
-- **Estética**: Cejas y pestañas, masajes faciales y craneales
+- Masaje descontracturante
+- Masaje relajante
+- Masaje para ciático
+- Masaje para bruxismo
 
-## 📍 Ubicación
+## Ubicación
 
 Brasil y Monseñor Sueldo, Catamarca Capital
 
 **Horarios**: Lunes a Sábado · 09:00–12:00 y 14:00–21:00
 
-## 🚀 Tecnologías
+## Tecnologías
 
 - HTML5
 - CSS3 (diseño responsive)
 - JavaScript vanilla
 
-## 📱 Contacto
+## Contacto
 
 Reservas por WhatsApp: [3834938577](https://wa.me/543834938577)
 
-## 💻 Despliegue
+## Despliegue (Vercel)
 
-Este sitio está desplegado en Netlify para un hosting rápido y confiable.
+Sitio estático listo para Vercel (`vercel.json` incluido).
+
+### Opción rápida (recomendada)
+
+1. Entrá a [vercel.com/new](https://vercel.com/new)
+2. Importá el repo `Fedecaff/Meraki`
+3. Dejá el framework en **Other** / estático (sin build)
+4. Deploy
+
+Cada push a `main` publica producción; cada PR genera una preview.
+
+### Opción CLI
+
+```bash
+npx vercel
+npx vercel --prod
+```
 
 ---
 
-© 2025 Meraki. Todos los derechos reservados.
-
+© Meraki. Todos los derechos reservados.
