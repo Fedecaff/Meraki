@@ -1,19 +1,24 @@
-
-*~
 # Archivos del sistema
-# Archivos de trabajo personal
-# Archivos temporales
-cosas por ver meraki.txt
-desktop.ini
 .DS_Store
-# Editores
-.idea/
-*.log
-node_modules/
-# Node modules (por si en el futuro agregas herramientas)
-*.swo
-*.swp
 Thumbs.db
-*.tmp
-.vercel
+desktop.ini
+
+# Editores
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Node modules (por si en el futuro agregas herramientas)
+node_modules/
+
+# Vercel
+.vercel
+
+# Archivos de trabajo personal
+cosas por ver meraki.txt
